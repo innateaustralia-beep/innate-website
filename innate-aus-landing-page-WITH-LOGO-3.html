@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Innate AUS - Licensed facade & cladding contractor. 25+ years of excellence. Custom facades, garage doors, and premium cladding systems. innateaus.com.au">
+    <meta name="keywords" content="facades, cladding, garage doors, Knotwood, Sydney, builder, innateaus">
+    <meta name="author" content="Innate AUS Pty Ltd">
+    <title>Innate AUS - Premium Facades & Cladding | innateaus.com.au</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2B2B2B;
+            background: #FFFFFF;
+        }
+
+        :root {
+            --charcoal: #2B2B2B;
+            --gold: #C9AD80;
+            --light-grey: #F5F5F5;
+            --white: #FFFFFF;
+            --text-dark: #2B2B2B;
+            --text-light: #666;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-link:hover img {
+            transform: scale(1.05);
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #3d3d3d 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(201, 173, 128, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-accent {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 14px 40px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 173, 128, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 14px 40px;
+            border: 2px solid var(--white);
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--charcoal);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            margin-top: 8px;
+            opacity: 0.85;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            background: var(--light-grey);
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--charcoal);
+        }
+
+        .section-title-accent {
+            color: var(--gold);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .about-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .about-features li:before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 800;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #3d3d3d 100%);
+            padding: 60px 40px;
+            border-radius: 8px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .about-image h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .feature-box {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feature-box h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--light-grey);
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 4px solid var(--gold);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 42px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            font-size: 48px;
+            color: var(--charcoal);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* BRANDS SECTION */
+        .brands-luxury {
+            background: var(--white);
+            padding: 120px 20px;
+        }
+
+        .brands-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .brands-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .brands-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .brands-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 25px auto;
+        }
+
+        .brands-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .brands-showcase {
+            margin-bottom: 80px;
+        }
+
+        .brand-tier {
+            margin-bottom: 70px;
+        }
+
+        .tier-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .brand-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .brand-card-luxury {
+            background: linear-gradient(135deg, var(--light-grey) 0%, #fafafa 100%);
+            padding: 45px 35px;
+            border-radius: 0;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid var(--gold);
+            position: relative;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .brand-card-luxury:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-6px);
+            border-left: 4px solid var(--charcoal);
+        }
+
+        .brand-icon {
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .brand-card-luxury h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-card-luxury p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .brand-card {
+            background: var(--white);
+            padding: 30px 25px;
+            border-radius: 0;
+            border: 1px solid #e8e8e8;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .brand-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .brand-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-card p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .brands-assurance {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #3d3d3d 100%);
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            border-top: 1px solid var(--gold);
+        }
+
+        .assurance-item {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .assurance-item h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .assurance-item p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold) 0%, #b89d6f 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--charcoal);
+            margin-bottom: 35px;
+        }
+
+        .cta-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-form input {
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            min-width: 200px;
+        }
+
+        .cta-form input::placeholder {
+            color: #999;
+        }
+
+        .cta-form button {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 14px 35px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+
+        .cta-form button:hover {
+            background: #1a1a1a;
+        }
+
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 50px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .compliance {
+            font-size: 11px;
+            color: #777;
+            margin-top: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .cta-form {
+                flex-direction: column;
+            }
+
+            .cta-form input {
+                width: 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .brand-grid-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .logo-link img {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .brand-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brands-assurance {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 30px;
+            }
+
+            .logo-link img {
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <a href="#" class="logo-link">
+            <img src="innate-logo.png" alt="Innate AUS - Premium Facades & Cladding">
+        </a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#brands">Partners</a>
+            <a href="#contact" class="cta-btn">Get Quote</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-container">
+        <h1>Premium <span class="hero-accent">Facades & Cladding</span><br>for Sydney Builders & Homeowners</h1>
+        <p>25+ years of licensed building excellence. Design, supply, and installation—all under one trusted team.</p>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Free Quote</button>
+            <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">See Our Work</button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Compliant & Certified</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">Why Choose <span class="section-title-accent">Innate AUS</span></h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Design. Supply. Install.<br>One Trusted Team.</h3>
+                <p>Innate AUS is Australia's only facade contractor combining licensed building expertise with 25+ years of hands-on excellence. We design custom facades, supply premium materials, and install with precision—all under one accountable team.</p>
+                <ul class="about-features">
+                    <li><strong>NSW Builders Licence 334077C</strong> — Full legal accountability</li>
+                    <li><strong>Knotwood Partnership</strong> — Premium timber-look systems</li>
+                    <li><strong>NCC 2025 Compliant</strong> — Non-combustible by design</li>
+                    <li><strong>6-Year Warranty</strong> — Backed by statutory protection</li>
+                    <li><strong>National Delivery</strong> — Sydney-based, Australia-wide</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <h4>What Sets Us Apart</h4>
+                <div class="feature-box">
+                    <h5>Design-Led</h5>
+                    <p>Architectural vision meets practical excellence</p>
+                </div>
+                <div class="feature-box">
+                    <h5>Vertically Integrated</h5>
+                    <p>Design + supply + install = no interface risk</p>
+                </div>
+                <div class="feature-box">
+                    <h5>Compliance First</h5>
+                    <p>Every project meets or exceeds building codes</p>
+                </div>
+                <div class="feature-box">
+                    <h5>Builder Trusted</h5>
+                    <p>100+ partner builders return again & again</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Our <span class="section-title-accent">Services</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">◆</div>
+                <h3>Custom Residential Facades</h3>
+                <p>Premium cladding for new homes, knock-down rebuilds, extensions & renovations. Knotwood systems with design-first approach.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">◆</div>
+                <h3>Garage Door Systems</h3>
+                <p>Complete garage door design, supply & installation integrated with facade cladding. Smart home ready.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">◆</div>
+                <h3>Commercial & Remedial</h3>
+                <p>Principal contracting, facade installation, non-combustible compliance & ACP recladding. On-time, on-spec delivery.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BRANDS & PARTNERS SECTION -->
+<section class="brands-luxury" id="brands">
+    <div class="brands-container">
+        <div class="brands-header">
+            <h2 class="brands-title">Trusted <span class="section-title-accent">Partnerships</span></h2>
+            <div class="brands-divider"></div>
+            <p class="brands-subtitle">
+                Exclusive relationships with Australia's most prestigious facade and building systems. 
+                Premium materials, priority access, and manufacturer-backed performance.
+            </p>
+        </div>
+
+        <div class="brands-showcase">
+            <div class="brand-tier">
+                <h3 class="tier-label">PREMIUM PARTNERS</h3>
+                <div class="brand-grid-premium">
+                    <div class="brand-card-luxury">
+                        <div class="brand-icon">◆</div>
+                        <h4>Knotwood</h4>
+                        <p>Luxury timber-look aluminium systems</p>
+                    </div>
+                    <div class="brand-card-luxury">
+                        <div class="brand-icon">◆</div>
+                        <h4>James Hardie</h4>
+                        <p>Premium fibre cement & cladding</p>
+                    </div>
+                    <div class="brand-card-luxury">
+                        <div class="brand-icon">◆</div>
+                        <h4>HVG Facades</h4>
+                        <p>Facade systems & architectural solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-tier">
+                <h3 class="tier-label">APPROVED SUPPLIERS</h3>
+                <div class="brand-grid">
+                    <div class="brand-card">
+                        <h4>Fairview</h4>
+                        <p>Architectural cladding</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>Innowood</h4>
+                        <p>Sustainable timber alternative</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>Modinex Group</h4>
+                        <p>Leading-edge architectural</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>MondoClad</h4>
+                        <p>Aluminium composite panel</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>Cemintel</h4>
+                        <p>Territory & fibre cement</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>CSR Building</h4>
+                        <p>Building products & systems</p>
+                    </div>
+                    <div class="brand-card">
+                        <h4>PlastaMasta</h4>
+                        <p>Building & lining supplies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands-assurance">
+            <div class="assurance-item">
+                <h5>Warranty Backed</h5>
+                <p>Manufacturer guarantees on all materials</p>
+            </div>
+            <div class="assurance-item">
+                <h5>Priority Access</h5>
+                <p>Exclusive material availability & lead times</p>
+            </div>
+            <div class="assurance-item">
+                <h5>Technical Support</h5>
+                <p>Direct supplier collaboration on every project</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+    <div class="container">
+        <h2>Ready to Transform Your Project?</h2>
+        <p>Get a free, no-obligation facade consultation from our team.</p>
+        
+        <!-- ASCORA INTEGRATION FORM -->
+        <form id="innateForm" class="cta-form">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Your email address" required>
+            <input type="tel" id="phone" placeholder="Your phone number" required>
+            <button type="submit">Get Quote</button>
+        </form>
+        
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+            ✓ Thanks! Your quote request has been sent to our Ascora system. We'll contact you within 24 hours.
+        </div>
+        
+        <p style="margin-top: 25px; font-size: 14px; color: var(--charcoal); opacity: 0.8;">
+            Or call us directly: <strong>1300 446 628 (1300 4 INNATE)</strong>
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>About Innate AUS</h4>
+            <p>25+ years of licensed building excellence. Custom facades, garage doors & premium cladding systems. Design, supply & installation.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#about">About Us</a><br>
+            <a href="#services">Services</a><br>
+            <a href="#contact">Get a Quote</a><br>
+            <a href="#">Capability Statement</a>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> 1300 446 628</p>
+            <p><strong>Email:</strong> sales@facadesbyinnate.com.au</p>
+            <p><strong>Location:</strong> Sydney, NSW</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Innate AUS Pty Ltd. All rights reserved. | www.innateaus.com.au</p>
+        <div class="compliance">
+            <strong>ABN 44 630 794 839</strong> | NSW Builders Licence 334077C | HIA Member<br>
+            <strong>Compliance:</strong> NCC 2025 Compliant | AS 1530.1 Non-Combustible Systems | Design & Building Practitioners Act
+        </div>
+    </div>
+</footer>
+
+<!-- ASCORA FORM SUBMISSION SCRIPT -->
+<script>
+document.getElementById('innateForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    // IMPORTANT: Replace 'YOUR_ZAPIER_WEBHOOK_URL_HERE' with your actual Zapier webhook URL
+    const ZAPIER_WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE';
+    
+    try {
+        // Send to Zapier webhook (which sends to Ascora)
+        const response = await fetch(ZAPIER_WEBHOOK_URL, {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                timestamp: new Date().toISOString(),
+                source: 'innateaus.com.au'
+            })
+        });
+        
+        if (response.ok) {
+            // Show success message
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Reset form
+            document.getElementById('innateForm').reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.remove('show');
+            }, 5000);
+        } else {
+            alert('There was an error sending your request. Please call us at 1300 446 628.');
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        alert('There was an error sending your request. Please call us at 1300 446 628.');
+    }
+});
+</script>
+
+</body>
+</html>
