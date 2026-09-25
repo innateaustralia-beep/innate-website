@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innate AUS - Facade & Cladding Specialists Sydney</title>
+    <meta name="description" content="Innate AUS provides premium facade and cladding solutions including fibre cement, timber-look composite, and modern aluminium systems across Sydney and NSW.">
+    <meta name="keywords" content="cladding Sydney, facade systems, James Hardie, Knotwood, building cladding NSW">
+    <meta name="author" content="Innate AUS Pty Ltd">
+    <meta property="og:title" content="Innate AUS - Facade & Cladding Specialists">
+    <meta property="og:description" content="Premium facade and cladding solutions for residential and commercial projects">
+    <meta property="og:type" content="business.business">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --charcoal: #2B2B2B;
+            --gold: #C9AD80;
+            --cream: #F5F1ED;
+            --white: #FFFFFF;
+            --light-gray: #F9F9F9;
+            --text-dark: #2B2B2B;
+            --text-light: #666666;
+        }
+        
+        body {
+            font-family: 'Lucida Sans', 'Calibri', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            height: 50px;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        nav a.active {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.25rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--cream);
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .cta-button:hover {
+            background: #B89860;
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+            display: none;
+        }
+        
+        section.active {
+            display: block;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--gold);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0 2rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gold);
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+        }
+        
+        .timeline-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Products */
+        .product-category {
+            margin-bottom: 3rem;
+        }
+        
+        .brand-list {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        .brand-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .brand-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+        }
+        
+        .brand-list li::before {
+            content: '▸ ';
+            color: var(--gold);
+            margin-right: 0.5rem;
+        }
+        
+        /* Contact Form */
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .contact-info {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+        }
+        
+        .contact-item {
+            margin: 1.5rem 0;
+        }
+        
+        .contact-item strong {
+            color: var(--charcoal);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .ascora-form-container {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 4px;
+            min-height: 600px;
+        }
+        
+        .ascora-form-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .testimonial {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 4px;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-credentials {
+            font-size: 0.85rem;
+            color: var(--cream);
+            margin-top: 1.5rem;
+            line-height: 1.4;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav a {
+                margin-left: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .ascora-form-container iframe {
+                height: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="innate-logo.png" alt="Innate AUS Logo" />
+            </div>
+            <nav>
+                <a href="#" class="nav-link active" onclick="showSection('home'); return false;">Home</a>
+                <a href="#" class="nav-link" onclick="showSection('about'); return false;">About</a>
+                <a href="#" class="nav-link" onclick="showSection('services'); return false;">Services</a>
+                <a href="#" class="nav-link" onclick="showSection('products'); return false;">Products</a>
+                <a href="#" class="nav-link" onclick="showSection('contact'); return false;">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME Section -->
+    <section id="home" class="active">
+        <div class="hero">
+            <h1>Premium Facade Solutions for Sydney</h1>
+            <p>Expert cladding and facade systems for residential and commercial projects</p>
+            <button class="cta-button" onclick="showSection('contact'); return false;">Get a Quote</button>
+        </div>
+        
+        <div class="container" style="padding-top: 2rem;">
+            <div class="cards">
+                <div class="card">
+                    <h3>Expert Installation</h3>
+                    <p>Professional facade and cladding installation across Sydney and NSW with attention to detail and quality craftsmanship.</p>
+                </div>
+                <div class="card">
+                    <h3>Premium Materials</h3>
+                    <p>We supply and install industry-leading brands including James Hardie, Knotwood, Modinex, and modern aluminium systems.</p>
+                </div>
+                <div class="card">
+                    <h3>Full Project Support</h3>
+                    <p>From initial consultation and design through site measurement, fabrication, and installation—we handle every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Innate AUS</h2>
+            <p>Innate AUS is a leading facade and cladding supplier and installer, serving residential and commercial clients across Sydney and NSW. We combine expertise in material selection, design consultation, and professional installation to deliver facade solutions that enhance durability, aesthetics, and property value.</p>
+            
+            <h3>Our Story</h3>
+            <p>Founded on the principles of quality, reliability, and customer focus, Innate AUS has built a reputation for delivering comprehensive facade solutions that meet the highest industry standards. Our team brings together decades of experience in building products, construction, and project management.</p>
+            
+            <h3>Leadership</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 style="margin-top: 0;">Vince Musico</h3>
+                    <p><strong>Director</strong></p>
+                    <p>Leads project delivery and client relationships with a focus on quality outcomes and customer satisfaction.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Eda Musico</h3>
+                    <p><strong>Director</strong></p>
+                    <p>Oversees operations, finance, and business strategy to ensure consistent excellence across all projects.</p>
+                </div>
+            </div>
+            
+            <h3>Credentials</h3>
+            <div class="brand-list">
+                <p><strong>ABN:</strong> 44 630 794 839</p>
+                <p><strong>ACN:</strong> 630 794 839</p>
+                <p><strong>Builders Licence:</strong> 334077C</p>
+                <p><strong>Operating since:</strong> 2019</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Process</h2>
+            <p>We follow a systematic 10-step approach to ensure every project is delivered on time, on budget, and to specification.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>1. Initial Consultation</h4>
+                    <p>Discuss your project goals, budget, timeline, and site conditions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2. Site Assessment</h4>
+                    <p>Conduct detailed site inspection and measurements.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>3. Design & Material Selection</h4>
+                    <p>Recommend materials and design solutions tailored to your requirements.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>4. Quote Preparation</h4>
+                    <p>Provide detailed cost estimate including materials and labour.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>5. Project Planning</h4>
+                    <p>Schedule timeline, arrange access, and coordinate logistics.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>6. Material Procurement</h4>
+                    <p>Source and arrange delivery of all required materials.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>7. Fabrication Prep</h4>
+                    <p>Prepare and organize materials for efficient installation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>8. Installation Execution</h4>
+                    <p>Professional on-site installation by experienced teams.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>9. Quality Inspection</h4>
+                    <p>Comprehensive quality check and site cleanup.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>10. Handover & Warranty</h4>
+                    <p>Final documentation, manuals, and warranty provision.</p>
+                </div>
+            </div>
+            
+            <h3>Service Categories</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 style="margin-top: 0;">Consultation & Design</h3>
+                    <p>Expert advice on material selection, aesthetics, and performance specifications for your specific needs.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Supply & Procurement</h3>
+                    <p>Sourcing premium materials from industry leaders with competitive pricing and reliable delivery.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Professional Installation</h3>
+                    <p>Full-service installation by qualified tradespeople ensuring code compliance and quality outcomes.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Project Management</h3>
+                    <p>End-to-end project coordination from quotation through completion and warranty support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS Section -->
+    <section id="products">
+        <div class="container">
+            <h2>Product Range</h2>
+            <p>We supply and install premium facade and cladding systems from leading manufacturers, tailored to your project requirements and aesthetic preferences.</p>
+            
+            <div class="product-category">
+                <h3>Fibre Cement Cladding</h3>
+                <p>Durable, weather-resistant fibre cement solutions for long-lasting exterior finishes.</p>
+                <div class="brand-list">
+                    <ul>
+                        <li>James Hardie</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-category">
+                <h3>Timber-Look & Composite</h3>
+                <p>Sustainable and low-maintenance timber-look alternatives with authentic aesthetics.</p>
+                <div class="brand-list">
+                    <ul>
+                        <li>Knotwood</li>
+                        <li>Decowood</li>
+                        <li>Innowood</li>
+                        <li>Woodex</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-category">
+                <h3>Versatile Composite & PVC</h3>
+                <p>Contemporary composite and PVC solutions for modern facade designs.</p>
+                <div class="brand-list">
+                    <ul>
+                        <li>Modinex</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-category">
+                <h3>Decorative Screening</h3>
+                <p>Functional and decorative screening systems for privacy and visual interest.</p>
+                <div class="brand-list">
+                    <ul>
+                        <li>Screenwood</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-category">
+                <h3>Modern Aluminium</h3>
+                <p>Sleek aluminium cladding systems for contemporary commercial and residential projects.</p>
+                <div class="brand-list">
+                    <ul>
+                        <li>Alumate</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Why Choose Our Products?</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 style="margin-top: 0;">Quality Assurance</h3>
+                    <p>All materials sourced from reputable manufacturers with proven track records in performance and durability.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Design Flexibility</h3>
+                    <p>Wide range of colours, finishes, and styles to match any architectural vision.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Performance</h3>
+                    <p>Weather-resistant, low-maintenance systems engineered for Australian climate conditions.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top: 0;">Warranty Support</h3>
+                    <p>Manufacturer backing and installation warranties provide long-term peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3 style="margin-top: 0;">Get in Touch</h3>
+                    <p>Ready to discuss your facade or cladding project? Contact our team for a consultation, site visit, or quote.</p>
+                    
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:sales@innateaus.com.au">sales@innateaus.com.au</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:1300713164">1300 713 164</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Service Area</strong>
+                        <p>Sydney and NSW</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Response Time</strong>
+                        <p>We aim to respond to all enquiries within 24 hours.</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>ABN</strong>
+                        <p>44 630 794 839</p>
+                    </div>
+                </div>
+                
+                <div class="ascora-form-container">
+                    <iframe src="https://ascora.com.au/Enquiry/ExternalEnquiry/Embed/81c4b827-a260-4bf4-8865-4988bd521d57/81c4b827-a260-4bf4-8865-4988bd521d57" title="Innate AUS Enquiry Form"></iframe>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 3rem;">Frequently Asked Questions</h3>
+            <div class="faq">
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">What areas do you service?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">We service Sydney and NSW. Contact us to discuss your specific location.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">How long does installation take?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Timeline depends on project scope. We'll provide a detailed schedule during planning.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">Do you provide warranties?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Yes. Both manufacturer warranties on materials and warranty on our installation work are included.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">Can you help with material selection?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Absolutely. Our consultants can recommend materials based on your budget, aesthetics, and performance needs.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">What does the quotation process involve?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">We conduct a site assessment, review your requirements, and provide a detailed cost estimate including materials and labour.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">How do I request a site visit?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Simply fill out the enquiry form or call 1300 713 164 to schedule a consultation and site visit.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">Are there payment plans available?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Payment terms vary by project. Contact us to discuss options for your specific job.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">Do you offer design consultation?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Yes. We provide expert design advice and material recommendations tailored to your project vision.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">What brands do you stock?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">We supply James Hardie, Knotwood, Decowood, Innowood, Woodex, Modinex, Screenwood, and Alumate—see our Products page for details.</p>
+                </details>
+                
+                <details style="margin-bottom: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--charcoal);">Can you work with architects or builders?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--text-light);">Yes. We partner with architects, builders, and trade contractors on supply and installation projects.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Innate AUS Pty Ltd. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:sales@innateaus.com.au">Email</a>
+                <a href="tel:1300713164">Phone</a>
+            </div>
+            <div class="footer-credentials">
+                <p>ABN 44 630 794 839 | ACN 630 794 839 | Builders Licence 334077C</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Remove active from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(id).classList.add('active');
+            
+            // Add active to clicked nav link
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
